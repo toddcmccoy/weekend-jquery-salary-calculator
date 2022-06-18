@@ -35,5 +35,9 @@ input{
     text-align: center;
     border: 2px solid black;
     border-collapse: collapse;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18pt;
+    height: 48px;
     width: 180px;
 }
