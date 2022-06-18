@@ -27,9 +27,27 @@ th{
     height: 48px;
     width: 180px;
 }
-tr:nth-child(even) {
+
+tr{
+    background-color: white;
+    border: 2px solid black;
+}
+/* tr:nth-child(even) {
     background-color: lightgray;
     border: 2px solid black;
+} */
+td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18pt;
+    height: 48px;
+    width: 180px;
+}
+.employee-form{
+    display: flexbox;
+    align-items: center;
 }
 input{
     text-align: center;

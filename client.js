@@ -10,13 +10,32 @@ function onReady(){
 
 // create a function to collect inputs
 function addEmployee() {
-    console.log('clicked');
     let firstname = $('#first-name').val();
     let lastname = $('#last-name').val();
+    let idnumber = $('#emp-number').val();
+    let emptitle = $('#emp-title').val();
+    let salary = $('#annual-salary').val();
+    
+    console.log('clicked');
     console.log(firstname);
     console.log(lastname);
-    $('#employee-table').append(`<ti id="#f-name">${firstname}</li>`);
-    $('#employee-table').append(`<ti id="#l-name">${lastname}</li>`);
+    console.log(idnumber);
+    console.log(emptitle);
+    console.log(salary);
+
+    $('#employee-table tr:last').after(
+        `<td id="#f-name">${firstname}</td>`,
+        `<td id="#l-name">${lastname}</td>`,
+        `<td id="#id-number">${idnumber}</td>`,
+        `<td id="#job-title">${emptitle}</td>`,
+        `<td id="#emp-salary">${salary}</td></tr>`,
+        '<tr>'
+        );
+    // $('#employee-table').append(`<ti id="#f-name">${firstname}</ti>`);
+    // $('#employee-table').append(`<ti id="#l-name">${lastname}</ti>`);
+    // $('#employee-table').append(`<ti id="#id-number">${idnumber}</ti>`);
+    // $('#employee-table').append(`<ti id="#job-title">${emptitle}</ti>`);
+    // $('#employee-table').append(`<ti id="#emp-salary">${salary}</ti>`);
 }
 //append input info to the table
 
