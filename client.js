@@ -38,6 +38,8 @@ function addEmployee() {
     employees.push(anotherEmployee);
 //calling function to show monthly salaries
     getMonthlySalary();
+//clear the input fields
+
 }
 
 //clear inputs function
@@ -47,6 +49,8 @@ function addEmployee() {
 //create a function that takes the annual summary and calculates the monthly expense
 function getMonthlySalary(){
     console.log('in getMonthlySalary');
-        
+    for (employee of employees){
+    let result = employee.salary;
+    }
 }
 //create a function that removes an employee from the table
