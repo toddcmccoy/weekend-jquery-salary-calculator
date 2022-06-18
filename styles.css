@@ -1,22 +1,39 @@
 body {
-    background-color: firebrick;
-    margin: 10px;
+    background-color: white;
+    margin: 0px;
     padding: 0px
+}
+
+header{
+    text-align: center;
+}
+h1{
+    color: black;
+    font-size: 32pt;
 }
 table{
     text-align: center;
     border: 2px solid black;
-}
-.center {
+    border-collapse: collapse;
     margin-left: auto; 
     margin-right: auto;
 }
 th{
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18pt;
+    height: 48px;
+    width: 180px;
 }
 tr:nth-child(even) {
     background-color: lightgray;
-    border-bottom: 2px solid darkgray;
-    border-right: 2px solid black;
+    border: 2px solid black;
+}
+input{
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 180px;
 }
