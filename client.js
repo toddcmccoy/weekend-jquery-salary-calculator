@@ -36,8 +36,8 @@ function addEmployee() {
     };
 //storing each employee object in an array
     employees.push(anotherEmployee);
-//calling function to show
-
+//calling function to show monthly salaries
+    getMonthlySalary();
 }
 
 //clear inputs function
@@ -45,5 +45,8 @@ function addEmployee() {
 //append input info to the table
 
 //create a function that takes the annual summary and calculates the monthly expense
-
+function getMonthlySalary(){
+    console.log('in getMonthlySalary');
+        
+}
 //create a function that removes an employee from the table

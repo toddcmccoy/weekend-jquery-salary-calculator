@@ -11,6 +11,11 @@ h1{
     color: black;
     font-size: 32pt;
 }
+h2{
+    color: black;
+    font-size: 24pt;
+    text-align: center;
+}
 table{
     text-align: center;
     border: 2px solid black;
