@@ -6,37 +6,42 @@ function onReady(){
     $('#add-employee').on('click', addEmployee);
 }
 
+let employees = [];
 
 
 // create a function to collect inputs
 function addEmployee() {
-    let firstname = $('#first-name').val();
-    let lastname = $('#last-name').val();
-    let idnumber = $('#emp-number').val();
-    let emptitle = $('#emp-title').val();
+    let firstName = $('#first-name').val();
+    let lastName = $('#last-name').val();
+    let idNumber = $('#emp-number').val();
+    let employeeTitle = $('#emp-title').val();
     let salary = $('#annual-salary').val();
-    
-    console.log('clicked');
-    console.log(firstname);
-    console.log(lastname);
-    console.log(idnumber);
-    console.log(emptitle);
-    console.log(salary);
 
+//adding inputted data to the DOM
     $('#employee-table tr:last').after(
-        `<td id="#f-name">${firstname}</td>`,
-        `<td id="#l-name">${lastname}</td>`,
-        `<td id="#id-number">${idnumber}</td>`,
-        `<td id="#job-title">${emptitle}</td>`,
-        `<td id="#emp-salary">${salary}</td></tr>`,
+        `<td>${firstName}</td>`,
+        `<td>${lastName}</td>`,
+        `<td>${idNumber}</td>`,
+        `<td>${employeeTitle}</td>`,
+        `<td>${salary}</td></tr>`,
         '<tr>'
         );
-    // $('#employee-table').append(`<ti id="#f-name">${firstname}</ti>`);
-    // $('#employee-table').append(`<ti id="#l-name">${lastname}</ti>`);
-    // $('#employee-table').append(`<ti id="#id-number">${idnumber}</ti>`);
-    // $('#employee-table').append(`<ti id="#job-title">${emptitle}</ti>`);
-    // $('#employee-table').append(`<ti id="#emp-salary">${salary}</ti>`);
+//take employee data and create an object that will be used to calculate monthly salary
+    let anotherEmployee={
+        firstname: $('#first-name').val(),
+        lastname: $('#last-name').val(),
+        idnumber: Number($('#emp-number').val()),
+        emptitle: $('#emp-title').val(),
+        salary: Number($('#annual-salary').val()),
+    };
+//storing each employee object in an array
+    employees.push(anotherEmployee);
+//calling function to show
+
 }
+
+//clear inputs function
+
 //append input info to the table
 
 //create a function that takes the annual summary and calculates the monthly expense
