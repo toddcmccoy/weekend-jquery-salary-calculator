@@ -39,7 +39,7 @@ function addEmployee() {
 //calling function to show monthly salaries
     getMonthlySalary();
 //clear the input fields
-
+    emptyFields();
 }
 
 //clear inputs function
@@ -49,8 +49,20 @@ function addEmployee() {
 //create a function that takes the annual summary and calculates the monthly expense
 function getMonthlySalary(){
     console.log('in getMonthlySalary');
-    for (employee of employees){
-    let result = employee.salary;
+    let result=0;
+    for (employee of employees){ 
+        result += employee.salary/12;
     }
+    $('#salary-obligations').text(result);
+}
+
+
+
+function emptyFields(){
+    $('#first-name').val(''),
+    $('#last-name').val(''),
+    $('#emp-number').val(''),
+    $('#emp-title').val(''),
+    $('#annual-salary').val('')
 }
 //create a function that removes an employee from the table

@@ -3,7 +3,6 @@ body {
     margin: 0px;
     padding: 0px
 }
-
 header{
     text-align: center;
 }
@@ -14,6 +13,11 @@ h1{
 h2{
     color: black;
     font-size: 24pt;
+    text-align: center;
+}
+p{
+    color: black;
+    font-size: 18pt;
     text-align: center;
 }
 table{
@@ -37,10 +41,6 @@ tr{
     background-color: white;
     border: 2px solid black;
 }
-/* tr:nth-child(even) {
-    background-color: lightgray;
-    border: 2px solid black;
-} */
 td{
     border: 2px solid black;
     border-collapse: collapse;
@@ -49,10 +49,6 @@ td{
     font-size: 18pt;
     height: 48px;
     width: 180px;
-}
-.employee-form{
-    display: flexbox;
-    align-items: center;
 }
 input{
     text-align: center;
