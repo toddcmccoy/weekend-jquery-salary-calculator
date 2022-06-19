@@ -20,7 +20,7 @@ function addEmployee() {
 
 //adding inputted data to the DOM
     $('.employee-data').append(`
-        <tr class = "an-employee">
+        <tr>
         <td>${firstName}</td>,
         <td>${lastName}</td>,
         <td>${idNumber}</td>,
