@@ -19,15 +19,16 @@ function addEmployee() {
     let salary = $('#annual-salary').val();
 
 //adding inputted data to the DOM
-    $('#employee-table tr:last').after(
-        `<td>${firstName}</td>`,
-        `<td>${lastName}</td>`,
-        `<td>${idNumber}</td>`,
-        `<td>${employeeTitle}</td>`,
-        `<td>${salary}</td>`,
-        `<td><button id="remove-employee">Remove Employee</button></td></tr>`,
-        `<tr>`
-        );
+    $('.employee-data').after(`
+        <tr class = "anEmployee">
+        <td>${firstName}</td>,
+        <td>${lastName}</td>,
+        <td>${idNumber}</td>,
+        <td>${employeeTitle}</td>,
+        <td>${salary}</td>,
+        <td><button id="remove-employee">Remove Employee</button></td>,
+        </tr>
+        `);
 
 //take employee data and create an object that will be used to calculate monthly salary
     let anotherEmployee={
@@ -70,5 +71,5 @@ function emptyFields(){
 //create a function that removes an employee from the table
 function removeEmployee(){
     console.log('in removeEmployee');
-    $(this).remove();
+    $('#employee-data').remove();
 }
