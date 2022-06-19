@@ -4,7 +4,7 @@ function onReady(){
     console.log('JS has arrived');
     console.log('jQuery is here too');
     $('#add-employee').on('click', addEmployee);
-    $('#employee-table').on('click', '#remove-employee', removeEmployee);
+    $('.employee-data').on('click', '#remove-employee', removeEmployee);
 }
 
 let employees = [];
@@ -19,8 +19,8 @@ function addEmployee() {
     let salary = $('#annual-salary').val();
 
 //adding inputted data to the DOM
-    $('.employee-data').after(`
-        <tr class = "anEmployee">
+    $('.employee-data').append(`
+        <tr class = "an-employee">
         <td>${firstName}</td>,
         <td>${lastName}</td>,
         <td>${idNumber}</td>,
@@ -58,6 +58,11 @@ function getMonthlySalary(){
         result += employee.salary/12;
     }
     $('#salary-obligations').text(result);
+    if (result>=20000) {
+        $('#salary-obligations').css({"background-color": "#ff0000"});
+    } else {
+        $('#salary-obligations').css({"background-color": "#FFFFFF"});
+    }
 }//end getMonthlySalary function
 
 //clear inputs function
@@ -71,5 +76,5 @@ function emptyFields(){
 //create a function that removes an employee from the table
 function removeEmployee(){
     console.log('in removeEmployee');
-    $('#employee-data').remove();
+    $(this).closest('tr').remove();
 }
