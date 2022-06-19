@@ -26,6 +26,7 @@ function addEmployee() {
         `<td>${salary}</td></tr>`,
         '<tr>'
         );
+
 //take employee data and create an object that will be used to calculate monthly salary
     let anotherEmployee={
         firstname: $('#first-name').val(),
@@ -54,12 +55,7 @@ function getMonthlySalary(){
         result += employee.salary/12;
     }
     $('#salary-obligations').text(result);
-    if (result >= 20000) {
-        $('#salary-obligations').css("background-color": "#ff0000");
-    }
 }
-
-
 
 function emptyFields(){
     $('#first-name').val(''),
