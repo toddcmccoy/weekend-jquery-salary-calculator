@@ -54,6 +54,9 @@ function getMonthlySalary(){
         result += employee.salary/12;
     }
     $('#salary-obligations').text(result);
+    if (result >= 20000) {
+        $('#salary-obligations').css("background-color": "#ff0000");
+    }
 }
 
 

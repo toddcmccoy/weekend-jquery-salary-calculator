@@ -50,6 +50,15 @@ td{
     height: 48px;
     width: 180px;
 }
+#add-employee{
+    display: inline-block;
+    margin-left: 71%;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 18pt;
+    height: 48px;
+    width: 240px;
+}
 input{
     text-align: center;
     border: 2px solid black;
