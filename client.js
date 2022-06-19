@@ -4,6 +4,7 @@ function onReady(){
     console.log('JS has arrived');
     console.log('jQuery is here too');
     $('#add-employee').on('click', addEmployee);
+    $('#employee-table').on('click', '#remove-employee', removeEmployee);
 }
 
 let employees = [];
@@ -23,8 +24,9 @@ function addEmployee() {
         `<td>${lastName}</td>`,
         `<td>${idNumber}</td>`,
         `<td>${employeeTitle}</td>`,
-        `<td>${salary}</td></tr>`,
-        '<tr>'
+        `<td>${salary}</td>`,
+        `<td><button id="remove-employee">Remove Employee</button></td></tr>`,
+        `<tr>`
         );
 
 //take employee data and create an object that will be used to calculate monthly salary
@@ -41,11 +43,11 @@ function addEmployee() {
     getMonthlySalary();
 //clear the input fields
     emptyFields();
-}
+}//end addEmployee function
 
-//clear inputs function
 
-//append input info to the table
+
+
 
 //create a function that takes the annual summary and calculates the monthly expense
 function getMonthlySalary(){
@@ -55,13 +57,18 @@ function getMonthlySalary(){
         result += employee.salary/12;
     }
     $('#salary-obligations').text(result);
-}
+}//end getMonthlySalary function
 
+//clear inputs function
 function emptyFields(){
     $('#first-name').val(''),
     $('#last-name').val(''),
     $('#emp-number').val(''),
     $('#emp-title').val(''),
     $('#annual-salary').val('')
-}
+}//end emptyFields function
 //create a function that removes an employee from the table
+function removeEmployee(){
+    console.log('in removeEmployee');
+    $(this).remove();
+}
