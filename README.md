@@ -8,7 +8,7 @@
 
 ## Description
 
-_Duration: 15 Hours_
+_Duration: 21 Hours_
 
 This project is designed to help an employer keep track of their employees' salaries and the employer's monthly salary payroll obligation.
 
